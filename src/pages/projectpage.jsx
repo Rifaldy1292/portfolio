@@ -9,7 +9,7 @@ const projects = [
     title: "To-do list website",
     description:
       "A Todo List website built with JavaScript allows users to add, edit, and delete tasks. Tasks are stored in the browser's local storage for easy access. The simple and responsive interface helps users manage their tasks efficiently.",
-    image: { imageTodoListWeb },
+    image:  imageTodoListWeb ,
     link: "https://github.com/Rifaldy1292/tugas-4",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "Movie streaming web",
     description:
       "The movie streaming website is responsive with features such as email verification for user login. Built with React and Tailwind, it offers a seamless browsing experience. The site stores movie data and user information securely in a MySQL database.",
-    image:  { imageStreamingWeb },
+    image:   imageStreamingWeb ,
     link: "https://github.com/Rifaldy1292/misi-5-hari-senin",
   },
 ];
