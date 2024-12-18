@@ -1,13 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import imageStreamingWeb from "../img/chillMovie.png";
+import imageTodoListWeb from "../img/todoList.png";
+import imageAdminLaundry from "../img/web admin laundrey.png";
 
 const projects = [
   {
     id: 1,
-    title: "To-do list website",
+    title: "To-do list web",
     description:
       "A Todo List website built with JavaScript allows users to add, edit, and delete tasks. Tasks are stored in the browser's local storage for easy access. The simple and responsive interface helps users manage their tasks efficiently.",
-    image: "src/img/todoList.png",
+    image: imageTodoListWeb,
     link: "https://github.com/Rifaldy1292/tugas-4",
   },
   {
@@ -15,8 +18,16 @@ const projects = [
     title: "Movie streaming web",
     description:
       "The movie streaming website is responsive with features such as email verification for user login. Built with React and Tailwind, it offers a seamless browsing experience. The site stores movie data and user information securely in a MySQL database.",
-    image: "src/img/chillMovie.png",
+    image: imageStreamingWeb,
     link: "https://github.com/Rifaldy1292/misi-5-hari-senin",
+  },
+  {
+    id: 3,
+    title: "Admin Laundry Web",
+    description:
+      "Admin web app to manage customer and transaction data. Key features include Customer Data Management: Add, change, and delete information, and add transactions. Interactive Dashboard: Displays customer statistics, revenue, and transaction reports.Built using React.js with a responsive and easy-to-use design.",
+    image: imageAdminLaundry, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/Rifaldy1292/web-admin-laundery",
   },
 ];
 

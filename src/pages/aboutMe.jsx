@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import avatar from "../img/hinh-anh-avatar-luffy-cuoi.jpg";
+import SkillLogos from "../component/ui/skill";
 const AboutMe = () => {
   return (
     <section className=" text-white py-16 px-8 min-h-screen flex items-center justify-center">
@@ -55,6 +56,7 @@ const AboutMe = () => {
             LinkedIn
           </motion.a>
         </div>
+        <SkillLogos />
       </motion.div>
     </section>
   );
