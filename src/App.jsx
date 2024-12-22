@@ -13,7 +13,7 @@ function App() {
       <div className="font-sans">
         <Background />
 
-        <Routes>
+        <Routes> 
           <Route path="/" element={<Homepage />} />
           <Route path="/project" element={<Projectpage />} />{" "}
           <Route path="/aboutMe" element={<AboutMe />} />
