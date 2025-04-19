@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Content = () => {
   return (
-    <div className="md:p-[40px] md:pl-[90px] flex pl-[10px]">
+    <div className="md:p-[40px] md:pl-[90px] flex pl-[10px] pb-16">
       <div className="w-[200px] mt-[120px] ">
         {/* Animasi untuk tombol */}
         <motion.div
@@ -14,12 +14,13 @@ const Content = () => {
           transition={{ duration: 1, delay: 0.3 }} // Durasi animasi dan sedikit delay untuk tombol
         >
           <Button addClass="mt-[15px]">
-            <Link to="/project">Project</Link>
-          </Button>
-          <Button addClass="mt-[15px]">
             {" "}
             <Link to="/aboutMe">AboutMe</Link>{" "}
           </Button>
+          <Button addClass="mt-[15px]">
+            <Link to="/project">Project</Link>
+          </Button>
+
           <Button addClass="mt-[15px]">
             {" "}
             <Link to="/journey">Journey</Link>{" "}
@@ -33,7 +34,7 @@ const Content = () => {
             <motion.img
               src={avatar}
               alt="avatar"
-              className="w-[150px] h-[150px] md:w-[270px] md:h-[270px] border border-white border-[1px] rounded-[15px] mb-4 md:mb-0 md:mr-[40px]"
+              className="object-cover  object-top w-[150px] h-[150px] md:w-[270px] md:h-[270px] border border-white border-[1px] rounded-[15px] mb-4 md:mb-0 md:mr-[40px]"
               initial={{ scale: 0 }} // Memulai dengan gambar kecil
               animate={{ scale: 1 }} // Menjadi ukuran normal (zoom-in)
               transition={{ duration: 1 }} // Durasi animasi
@@ -45,11 +46,13 @@ const Content = () => {
               animate={{ x: 0, opacity: 1 }} // Geser ke posisi normal dan opasitas penuh
               transition={{ duration: 1, delay: 0.3 }} // Durasi dan delay sedikit sebelum teks bergerak
             >
-              Welcome to my portfolio! I'm a passionate Fullstack web developer,
-              on my way to building my skills in creating digital solutions.
-              With the knowledge I have, I am committed to developing quality
-              and responsive web applications. Please browse some of the
-              projects I've worked on to see what I've accomplished so far.
+              Welcome to my portfolio! I’m a junior Front-End Developer
+              passionate about building responsive websites. Currently, I’m
+              learning Fullstack Development. I work with React, HTML, CSS, and
+              JavaScript, and I’m expanding my skills with Node.js, Express, and
+              MySQL. I’m focused on creating user-friendly applications and
+              always improving my skills. Feel free to check out some of the
+              projects I’ve worked on!
             </motion.span>
           </div>
           <div>

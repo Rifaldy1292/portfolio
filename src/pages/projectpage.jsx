@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import imageStreamingWeb from "../img/chillMovie.png";
 import imageTodoListWeb from "../img/todoList.png";
 import imageAdminLaundry from "../img/web admin laundrey.png";
-
+import Button from "../component/ui/button";
+import { Link } from "react-router-dom";
+import sms from "../img/pesan.png";
 const projects = [
   {
     id: 1,
@@ -33,46 +35,83 @@ const projects = [
 
 const ProjectsPage = () => {
   return (
-    <div className="p-8 min-h-screen ">
-      <h1 className="text-4xl text-white text-center mb-8">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            className="bg-gray-700 bg-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-xl transition flex flex-col"
-            initial={{ opacity: 0, y: 50 }} // Memulai dengan opacity 0 dan posisi sedikit lebih rendah
-            animate={{ opacity: 1, y: 0 }} // Bergerak ke posisi normal dengan opacity penuh
-            transition={{
-              duration: 0.8, // Durasi lebih lama untuk transisi yang lebih halus
-              ease: "easeOut", // Efek easing untuk transisi lebih alami
-            }}
-          >
-            {/* Gambar Proyek */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover rounded-t-lg"
-            />
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="w-full h-[81px] md:text-[34px] absolute text-[white] flex justify-between md:p-[40px] p-[5px] pl-[10px] md:pl-[90px]">
+          <div className="w-full  mt-auto flex justify-between">
+            <Button addClass="mt-[5px]">
+              <Link to="/">Home</Link>
+            </Button>
 
-            {/* Judul dan Deskripsi */}
-            <h2 className="text-xl text-white mt-4">{project.title}</h2>
-            <p className="text-gray-300 mt-2 flex-grow">
-              {project.description}
-            </p>
-
-            {/* Tombol */}
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-auto bg-gray-600 text-center text-white py-2 rounded-lg hover:bg-gray-700 transition duration-300"
+            <div className="flex ">
+              <motion.div
+                className="bg-gray-400 cursor-pointer bg-opacity-20 rounded-full w-[42px] h-[42px] mt-[8px] ml-[20px]"
+                whileHover={{ scale: 1.1 }} // Animasi saat hover
+                whileTap={{ scale: 0.95 }} // Animasi saat tap
+              >
+                {" "}
+                <Link to="/contact">
+                  {" "}
+                  <img src={sms} alt="SMS icon" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>{" "}
+      </motion.div>
+      <div className="p-8 min-h-screen ">
+        <h1 className="text-4xl text-white text-center mb-8">My Projects</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="bg-gray-700 bg-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-xl transition flex flex-col"
+              initial={{ opacity: 0, y: 50 }} // Memulai dengan opacity 0 dan posisi sedikit lebih rendah
+              animate={{ opacity: 1, y: 0 }} // Bergerak ke posisi normal dengan opacity penuh
+              transition={{
+                duration: 0.8, // Durasi lebih lama untuk transisi yang lebih halus
+                ease: "easeOut", // Efek easing untuk transisi lebih alami
+              }}
             >
-              View Project
-            </a>
-          </motion.div>
-        ))}
+              {/* Gambar Proyek */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover rounded-t-lg"
+              />
+              {/* Judul dan Deskripsi */}
+              <h2 className="text-xl text-white mt-4">{project.title}</h2>
+              <p className="text-gray-300 mt-2 flex-grow">
+                {project.description}
+              </p>
+              {/* Tombol */}
+              <div className="mt-5 flex gap-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center  bg-gray-600 text-center text-white py-2 rounded-lg hover:bg-gray-700 transition duration-300"
+                >
+                  View Code
+                </a>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-gray-600 text-center text-white py-2 rounded-lg hover:bg-gray-700 transition duration-300"
+                >
+                  View Live
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

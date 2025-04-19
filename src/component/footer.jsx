@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <motion.div
-      className="w-full flex fixed bottom-0 left-0 right-0 flex justify-center" // Membuat div ini berada di tengah
+      className="w-full flex lg:fixed sm:static fixed bottom-0 left-0 right-0 flex justify-center" // Membuat div ini berada di tengah
       initial={{ x: "50px" }} // Mulai dari luar layar (di sebelah kiri)
       animate={{ x: 0 }} // Bergerak ke tengah (x=0)
       transition={{ duration: 0.5 }} // Durasi animasi 1 detik
