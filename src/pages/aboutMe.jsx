@@ -47,10 +47,12 @@ const AboutMe = () => {
 
           {/* Deskripsi */}
           <p className="text-lg sm:text-xl text-gray-400 mb-8">
-            Hello! I'm a passionate web developer with expertise in front-end
-            technologies like React, JavaScript, and Tailwind CSS. I love
-            building beautiful, user-friendly websites and continuously learning
-            new things.
+            I am an enthusiastic web developer with expertise in front-end
+            technologies such as React, JavaScript, and Tailwind CSS. I enjoy
+            building beautiful, user-friendly websites and love exploring new
+            technologies. I'm also a fullstack enthusiast who is constantly
+            learning and interested in understanding the backend side of web
+            development.
           </p>
 
           {/* Foto */}

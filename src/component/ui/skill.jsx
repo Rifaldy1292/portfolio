@@ -4,6 +4,9 @@ import htmlIcon from "../../img/html-5.png";
 import cssIcon from "../../img/css-3.png";
 import reactIcon from "../../img/science.png";
 import TailwindIcon from "../../img/Screenshot 2024-12-18 074151.png";
+import phpIcons from "../../img/new-php-logo.png";
+import mySql from "../../img/mysql.png";
+import laravel from "../../img/Laravel-Logo.png";
 import { div } from "framer-motion/client";
 const SkillLogos = () => {
   const skills = [
@@ -12,6 +15,9 @@ const SkillLogos = () => {
     { name: "JavaScript", logo: jsIcon },
     { name: "React", logo: reactIcon },
     { name: "Tailwind", logo: TailwindIcon },
+    { name: "Php", logo: phpIcons },
+    { name: "MySql", logo: mySql },
+    { name: "Laravel", logo: laravel },
   ];
 
   return (

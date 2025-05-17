@@ -3,17 +3,27 @@ import { motion } from "framer-motion";
 import imageStreamingWeb from "../img/chillMovie.png";
 import imageTodoListWeb from "../img/todoList.png";
 import imageAdminLaundry from "../img/web admin laundrey.png";
+import landingPageGarment from "../img/landing-page-garmen.png";
 import Button from "../component/ui/button";
 import { Link } from "react-router-dom";
 import sms from "../img/pesan.png";
 const projects = [
   {
-    id: 1,
-    title: "To-do list web",
+    id: 4,
+    title: "Landing Page PT Garmen",
     description:
-      "A Todo List website built with JavaScript allows users to add, edit, and delete tasks. Tasks are stored in the browser's local storage for easy access. The simple and responsive interface helps users manage their tasks efficiently.",
-    image: imageTodoListWeb,
-    link: "https://github.com/Rifaldy1292/tugas-4",
+      "PT Garmen Landing Page The official website showcasing PT Garmen's profile and services. Built with React and Tailwind CSS, featuring a responsive and modern design to create a professional impression for visitors.",
+    image: landingPageGarment, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/Rifaldy1292/web-admin-laundery",
+    live: "https://landigpage-garment.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "Admin Laundry Web",
+    description:
+      "Admin web app to manage customer and transaction data. Key features include Customer Data Management: Add, change, and delete information, and add transactions. Interactive Dashboard: Displays customer statistics, revenue, and transaction reports.Built using React.js with a responsive and easy-to-use design.",
+    image: imageAdminLaundry, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/Rifaldy1292/web-admin-laundery",
   },
   {
     id: 2,
@@ -24,12 +34,12 @@ const projects = [
     link: "https://github.com/Rifaldy1292/misi-5-hari-senin",
   },
   {
-    id: 3,
-    title: "Admin Laundry Web",
+    id: 1,
+    title: "To-do list web",
     description:
-      "Admin web app to manage customer and transaction data. Key features include Customer Data Management: Add, change, and delete information, and add transactions. Interactive Dashboard: Displays customer statistics, revenue, and transaction reports.Built using React.js with a responsive and easy-to-use design.",
-    image: imageAdminLaundry, // Pastikan ini didefinisikan dengan benar
-    link: "https://github.com/Rifaldy1292/web-admin-laundery",
+      "A Todo List website built with JavaScript allows users to add, edit, and delete tasks. Tasks are stored in the browser's local storage for easy access. The simple and responsive interface helps users manage their tasks efficiently.",
+    image: imageTodoListWeb,
+    link: "https://github.com/Rifaldy1292/tugas-4",
   },
 ];
 
@@ -99,7 +109,7 @@ const ProjectsPage = () => {
                   View Code
                 </a>
                 <a
-                  href={project.github}
+                  href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center bg-gray-600 text-center text-white py-2 rounded-lg hover:bg-gray-700 transition duration-300"
