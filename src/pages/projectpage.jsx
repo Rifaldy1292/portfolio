@@ -4,10 +4,48 @@ import imageStreamingWeb from "../img/chillMovie.png";
 import imageTodoListWeb from "../img/todoList.png";
 import imageAdminLaundry from "../img/web admin laundrey.png";
 import landingPageGarment from "../img/landing-page-garmen.png";
+import laravelVue from "../img/crud-laravel-vue.png";
 import Button from "../component/ui/button";
 import { Link } from "react-router-dom";
+import { FaLaravel, FaVuejs, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiExpress, SiJavascript } from "react-icons/si";
+import kinerjaku from "../img/kinerjaku-web.png";
 import sms from "../img/pesan.png";
 const projects = [
+  {
+    id: 6,
+    title: "Kinerjaku Web",
+    description:
+      "This web application is designed as a tool for HR to effectively monitor and manage employee performance across each division. Featuring structured reporting, an easy-to-use dashboard, and the ability to export data in Excel or PDF formats, HR can efficiently oversee evaluations, targets, and employee development with greater transparency.",
+    image: kinerjaku, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/randytjioe/management-employee-kpi",
+
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <FaLaravel />
+        <FaReact />
+        <SiTailwindcss />
+      </div>
+    ),
+  },
+  {
+    id: 5,
+    title: "Web CRUD admin Laravel + vue JS",
+    description:
+      "A functional admin dashboard built with Laravel and Vue.js, providing essential Create, Read, Update, and Delete operations. Designed primarily for utility and data management, focusing on core features over design aesthetics.",
+    image: laravelVue, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/Rifaldy1292/laravel-vue-test-project-PtPifacia",
+    live: "https://landigpage-garment.vercel.app/",
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <FaLaravel />
+        <FaVuejs />
+        <SiTailwindcss />
+      </div>
+    ),
+  },
   {
     id: 4,
     title: "Landing Page PT Garmen",
@@ -16,14 +54,13 @@ const projects = [
     image: landingPageGarment, // Pastikan ini didefinisikan dengan benar
     link: "https://github.com/Rifaldy1292/web-admin-laundery",
     live: "https://landigpage-garment.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Admin Laundry Web",
-    description:
-      "Admin web app to manage customer and transaction data. Key features include Customer Data Management: Add, change, and delete information, and add transactions. Interactive Dashboard: Displays customer statistics, revenue, and transaction reports.Built using React.js with a responsive and easy-to-use design.",
-    image: imageAdminLaundry, // Pastikan ini didefinisikan dengan benar
-    link: "https://github.com/Rifaldy1292/web-admin-laundery",
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <SiTailwindcss />
+        <FaReact />
+      </div>
+    ),
   },
   {
     id: 2,
@@ -32,7 +69,31 @@ const projects = [
       "The movie streaming website is responsive with features such as email verification for user login. Built with React and Tailwind, it offers a seamless browsing experience. The site stores movie data and user information securely in a MySQL database.",
     image: imageStreamingWeb,
     link: "https://github.com/Rifaldy1292/misi-5-hari-senin",
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <SiTailwindcss />
+        <FaReact />
+        <SiExpress />
+      </div>
+    ),
   },
+  {
+    id: 3,
+    title: "Admin Laundry Web",
+    description:
+      "Admin web app to manage customer and transaction data. Key features include Customer Data Management: Add, change, and delete information, and add transactions. Interactive Dashboard: Displays customer statistics, revenue, and transaction reports.Built using React.js with a responsive and easy-to-use design.",
+    image: imageAdminLaundry, // Pastikan ini didefinisikan dengan benar
+    link: "https://github.com/Rifaldy1292/web-admin-laundery",
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <SiTailwindcss />
+        <FaReact />
+      </div>
+    ),
+  },
+
   {
     id: 1,
     title: "To-do list web",
@@ -40,6 +101,12 @@ const projects = [
       "A Todo List website built with JavaScript allows users to add, edit, and delete tasks. Tasks are stored in the browser's local storage for easy access. The simple and responsive interface helps users manage their tasks efficiently.",
     image: imageTodoListWeb,
     link: "https://github.com/Rifaldy1292/tugas-4",
+    technology: (
+      <div className="flex gap-3">
+        {" "}
+        <SiJavascript />
+      </div>
+    ),
   },
 ];
 
@@ -98,7 +165,9 @@ const ProjectsPage = () => {
               <p className="text-gray-300 mt-2 flex-grow">
                 {project.description}
               </p>
-              {/* Tombol */}
+              <div className="text-xl flex text-white mt-4 gap-3">
+                Tech : <div>{project?.technology}</div>
+              </div>
               <div className="mt-5 flex gap-4">
                 <a
                   href={project.link}
